@@ -143,20 +143,20 @@ console.log(typeof testingString); //string
 const mountRushmore = ["Washington", "Jefferson", "Roosevelt"];
 
 console.log(mountRushmore);
-console.log(mountRushmore[0]);
+console.log(mountRushmore[0]); // Washington
 
-mountRushmore.push("Lincoln");
-console.log(mountRushmore[3]);
+mountRushmore.push("Lincoln"); //added Lincoln to the end of the array
+console.log(mountRushmore[3]); // Lincoln
 
-mountRushmore[4] = "Erica";
-console.log(mountRushmore[4]);
+mountRushmore[4] = "Erica"; // added Erica to end of the array
+console.log(mountRushmore[4]); // Erica
 
-mountRushmore.splice(1, 0, "BTS");
+mountRushmore.splice(1, 0, "BTS"); // added BTS in iddex 1
 console.log(mountRushmore);
 
 const president = "Washington";
-const presString = president.slice(0, 5);
-console.log(presString);
+const presString = president.slice(0, 5); 
+console.log(presString); // Washi
 
 // You can also place arrays within arrays.
 
@@ -227,8 +227,58 @@ const mountRushmoreTesting = ["Washington", "Jefferson", "Roosevelt"];
 //mountRushmoreTesting.unshift("lincoln"); //ADD BEGINNING added to beginning of array 
 //mountRushmoreTesting.shift(); // REMOVED BEGINNING removed Washington
 
-let numbers = [10, 5, 93]
+let numbers = [10, 5, 93, 5, 29, 5, 1]
 
 console.log(mountRushmoreTesting.length); //3
 console.log(mountRushmoreTesting); 
 console.log(mountRushmoreTesting.indexOf("Jefferson")); //1
+
+// .reverse()
+console.log(numbers.reverse()); // 1, 5, 29, 5, 93, 5, 10
+console.log(mountRushmoreTesting.reverse()); // Roosevelt , Jefferson, Washington
+
+// .concat()
+console.log(mountRushmoreTesting.concat( numbers )); // put 2 arrays together
+ 
+// .join() turns it into a string
+ let members = ["Namjoon", "Jin", "Suga"];
+
+console.log( members.join() ); // Namjoon,Jin,Suga
+console.log(typeof members.join()); //string
+console.log(members.join("")); //"" quotes take away commas NamjoonJinSuga
+console.log(members.join(" ")); // empty space addes a space Namjoon Jin Suga
+console.log(members.join("-")); //addes hyphen Namjoon-Jin-Suga
+
+// .sort() puts them in alphabetical/numerical order
+let books = ["Haryy Potter", "Percy Jackson", "Gatsby"];
+
+console.log(books.sort()); // Gatsby, Haryy Potter, Percy Jackson
+
+let orderNumbers = [ 25, 1, 3, 69, 10, 36, 42];
+
+console.log(orderNumbers.sort(function(a, b)
+{return a-b })); // shows number in numerical order
+
+
+
+// Practice
+/* Write an array that contains the names of celebritites
+Get the index of one name in that array (using an array method).
+Add another person in the front of the array (using an array method).
+Combine two arrays  */
+
+const musicians = ["Shawn Mendes", "Billie Eilish", "Conan Gray", "Olivia Rodgrigo", "BTS"];
+
+console.log(musicians.indexOf("Conan Gray")); //2
+
+musicians.unshift("Khalid");
+console.log(musicians); // added Khalid to beginning of array
+
+
+const actors = ["Zendaya", "Angelina Jolie", "Sandra Oh", "Noah Schnapp"];
+
+console.log(musicians.concat(actors)); // combined 2 arrays
+
+
+
+
