@@ -111,16 +111,14 @@ const karolin = ['Karolin', 16, 'New York'];
 const kristyn = ['Kristyn', 5, 'Pittsburgh'];
 const cathleen = ['Cathleen', 186, 'New York'];
 
-thom.shift();
-thom.unshift("Gameboy");
+thom[0]= "Gameboy";
 console.log(thom);
 
 karolin[1] = 17;
 console.log(karolin);
 
-cathleen[2] = "Gotham City";
+cathleen.splice(2,2, "Gotham City");
 console.log(cathleen);
 
-kristyn.pop();
-kristyn.push("Oakland");
+kristyn.splice(2,2, "Oakland");
 console.log(kristyn);
